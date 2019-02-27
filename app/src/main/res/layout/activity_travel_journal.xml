@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:orientation="vertical"
+    tools:context=".TravelJournal">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@string/trip_name"
+                android:textStyle="bold" />
+
+
+            <!-- foloseste edit text cu drwable NU FRAME LAYOUT, eu am invatat mai tarziu -->
+            <EditText
+                android:id="@+id/edittext_triptitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableLeft="@android:drawable/ic_menu_info_details"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@string/destination"
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:id="@+id/edittext_destination"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="100dp"
+                android:gravity="center"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingTop="10dp"
+                android:drawableStart="@android:drawable/ic_menu_myplaces"
+
+                />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@string/type"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:orientation="horizontal"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/loc1" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/loc2" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/loc3" />
+
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/price"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start Date"
+                android:textStyle="bold"
+                android:layout_gravity="start"/>
+
+            <TextView
+                android:layout_width="202dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="End Date"
+                android:textStyle="bold"
+
+                />
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_startdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DD/MM/YYYY"
+                android:onClick="btnDatePickerOnClick"
+                />
+
+
+            <Button
+                android:id="@+id/button_enddate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="34dp"
+                android:text="DD/MM/YYYY"
+                android:onClick="btnDatePickerOnClick"/>
+
+        </RelativeLayout>
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="Rating"
+            android:textStyle="bold" />
+        <RatingBar
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:numStars="5"
+            android:rating="4.5"
+            android:stepSize="0.5" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gallery Photo"
+                android:textStyle="bold"
+                android:layout_gravity="start"/>
+
+            <TextView
+                android:layout_width="202dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="Take Picture"
+                android:textStyle="bold"
+
+                />
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_galleryphoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SELECT"
+                android:onClick="btnChoosePictureOnClick"
+                />
+
+
+            <Button
+                android:id="@+id/button_takepicture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="34dp"
+                android:text="SELECT"
+                android:onClick="btnTakePicture"/>
+
+        </RelativeLayout>
+
+
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SAVE"
+            android:color="@color/colorPrimary"
+            android:onClick="btnSaveJourney"/>
+    </LinearLayout>
+</ScrollView>
+
