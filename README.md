@@ -1,6 +1,4 @@
 # Screenshots with the app
-https://drive.google.com/open?id=19Dl6u34xVGPXbTDDtny_KJZIY4BLM45
-
 https://drive.google.com/open?id=1j6zSGXmrNQt-CfEK-hl6Ow4UI9wnmTC3
 
 https://drive.google.com/open?id=12WZfcSru-C30eslGR3d_8_jWNOtw6ge7
